@@ -1,0 +1,133 @@
+//الاسم :عبدالرحيم ابراهيم عثمان امين
+//القسم :الحاسوب
+//المستوى:الثاني
+#include <iostream>
+#include <cmath>
+#include <cstring>
+
+
+
+using namespace std;
+
+// func يحتوي على دالة مجردة إسمها shape هنا قمنا بتعريف كلاس إسمه
+class shape
+{
+    public:
+    	int rid1 ,rid2 , diameter ,numofrids ;
+        double radius , contour , area ;
+        double const pi= 3.14 ;
+    	         
+};
+
+// print A و فيه قمنا بتعريف الدالة المجردة shape يرث من الكلاس ellipse هنا قمنا بتعريف محتوى الكلاس
+class ellipse : public shape
+{
+    public:
+        void printA ()
+        { 
+             cout << "ellipse ----------- \n";
+             cout<<"Enter diameter, raduis";
+             cin >> diameter>>   radius ;
+             contour= 2*pi*diameter+radius/2 ;
+             area= pi * radius*radius ;
+             cout <<"contour =   "<< contour ;
+             cout << "area =    "<< area ;
+
+        }  
+};
+// printB و فيه قمنا بتعريف الدالة المجردة ellipse يرث من الكلاس circle هنا قمنا بتعريف محتوى الكلاس
+class circle : public ellipse
+{
+    public:
+        void printB() 
+        {  
+            cout << "circle ----------- \n";
+            contour =diameter*radius ;
+            area =diameter*radius*radius ;
+            cout <<"contour circle =  "<< contour ;
+            cout <<"area circle =   "<< area ;
+        }
+};
+// printC و فيه قمنا بتعريف الدالة المجردة circle يرث من الكلاس polygon هنا قمنا بتعريف محتوى الكلاس
+class polygon : public circle
+{
+    public :
+        void printC() 
+        {  
+            cout << "polygon ----------- \n";
+            cout<<"Enter numofrids, rid1, rid2";
+            cin >> numofrids  >>rid1  >>rid2 ;
+            contour  = rid2 * rid1 ;
+            area = numofrids/2 ;
+            cout << "contour polygon =   "<< contour ;
+            cout << "area polygon =    "<< area ;
+        }
+};
+// printD و فيه قمنا بتعريف الدالة المجردة polygon يرث من الكلاس triangle هنا قمنا بتعريف محتوى الكلاس
+class triangle : public polygon
+{
+    public :
+        void printD()  
+        { 
+             cout << "triangle ----------- \n";
+             contour = rid1+rid2+numofrids ;
+             area = rid1 * rid2 /2 ;
+             cout << "contour triangle =    " << contour ;
+             cout << "area triangle =    " << area ;
+        }
+};
+// printF و فيه قمنا بتعريف الدالة المجردة triangle يرث من الكلاس rectangle هنا قمنا بتعريف محتوى الكلاس
+class rectangle : public triangle
+{
+    public :
+        void printF()
+        { 
+             cout << "rectangle ----------- \n";
+             contour = 2*rid1+2*rid2 ;
+             area = rid2 *rid1 ;
+             cout << "contour rectangle =    "<< contour ;
+             cout << "area rectangle =    " << area ;
+        }
+};
+// printG و فيه قمنا بتعريف الدالة المجردة rectangle يرث من الكلاس square هنا قمنا بتعريف محتوى الكلاس
+class square : public rectangle
+{
+    public :
+        void printG()
+        {  
+            cout << "square ----------- \n";
+            contour = 4*rid1 ;
+            area = rid1 * rid1 ;
+            cout << "contour square =    " << contour ;
+            cout << "area square =     "<< area ;
+        }
+};
+// main() هنا قمنا بتعريف الدالة
+int main()
+{
+    // d إسمه Derived هنا قمنا بإنشاء كائن من الكلاس
+    square sel;
+    char shell;
+//	في الكلاس sel من الكائن shale هنا قمنا باستدعاء الدالة
+    cout<<"Please select your shape: ";
+    cin>>shell;
+    //  و التي تم تعريفها 
+    if(shell=='E'){
+    	sel.printA();
+	}else if(shell=='C'){
+		sel.printB();
+	}else if(shell=='P'){   //if وشروط وتحديد نوع الاكلاس 
+		sel.printC();
+	}else if(shell=='T'){
+		sel.printD();
+	}else if(shell=='R'){
+		sel.printF();
+	}else if(shell=='S'){
+		sel.printG();
+	}else {
+		cout<<"Error, not defind";
+	}
+    
+    
+    return 0;
+}
