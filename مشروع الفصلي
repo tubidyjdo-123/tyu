@@ -1,0 +1,651 @@
+#include <bits/stdc++.h> 
+using namespace std;
+
+
+class Contact {
+    public:
+    string data;
+    Contact *next;
+};
+
+void push(Contact** head_ref, string new_data){
+    Contact* new_contact = new Contact();
+    new_contact->data = new_data;
+    new_contact->next = (*head_ref);
+    (*head_ref) = new_contact;
+};
+
+void insertAfter (Contact* prev_contact, string new_data){
+    if (prev_contact == NULL){
+		cout<<"the given previous node cannot be NULL"; 
+        return;
+    }
+    Contact* new_contact = new Contact();
+    new_contact->data = new_data;
+    new_contact->next = prev_contact->next;
+    prev_contact->next = new_contact;
+};
+
+void append(Contact** head_ref, string new_data){
+    Contact* new_contact = new Contact();
+    Contact *last = *head_ref;
+    new_contact->data = new_data;
+    new_contact->next = NULL;
+    if (*head_ref == NULL){
+        *head_ref = new_contact;
+        return;
+    }
+    while (last->next != NULL)
+        last = last->next;
+        last->next = new_contact;
+        return;
+       
+    
+};
+
+void printInfo(Contact *c){
+    while (c != NULL)
+    {
+        cout<< c->data << "\n\n";
+        c = c->next;
+    }
+    
+};
+
+int main(){
+    string x,y,z, L, J, K, H, G;
+    
+   cout<<"Contact details: \n";
+cout<<"-------------------------------------- \n";
+                                         
+
+    Contact* head = NULL;
+    Contact* second = NULL;
+    Contact* third = NULL;
+    Contact* forth = NULL;
+    Contact* fifth = NULL;
+    Contact* sixth = NULL;
+    Contact* seventh = NULL;
+    Contact* eighth = NULL;
+    Contact* ninth = NULL;
+    Contact* tenth = NULL;
+    Contact* eleventh = NULL;
+    Contact* twelfth = NULL;
+    Contact* thirteenth = NULL;
+    Contact* fourteenth = NULL;
+    Contact* fifteenth = NULL;
+    Contact* sixteenth = NULL;
+    Contact* seventeenth = NULL;
+    Contact* eighteenth = NULL;
+    Contact* nineteenth = NULL;
+    Contact* twentieth = NULL;
+    Contact* twentyFirst = NULL;
+    Contact* twentySecond = NULL;
+    Contact* twentyThird = NULL;
+    Contact* twentyForth = NULL;
+    Contact* twentyFifth = NULL;
+    Contact* twentySixth = NULL;
+    Contact* twentySeventh = NULL;
+    Contact* twentyEighth = NULL;
+    Contact* twentyNinth = NULL;
+    Contact* thirty = NULL;
+    Contact* thirtyFirst = NULL;
+    Contact* thirtySecond = NULL;
+    Contact* thirtyThird = NULL;
+    Contact* thirtyForth = NULL;
+     Contact* thirtyFifth = NULL;
+     Contact* thirtySixth = NULL;
+     Contact* thirtySeventh = NULL;
+     Contact* thirtyEighth = NULL;
+     Contact* thirtyNinth = NULL;
+     Contact* forty = NULL;
+     Contact* fortyFirst = NULL;
+     Contact* fortySecond = NULL;
+     Contact* fortyThird = NULL;
+     Contact* fortyForth = NULL;
+     Contact* fortyFifth = NULL;
+     Contact* fortySixth = NULL;
+     Contact* fortySeventh = NULL;
+     Contact* fortyEighth = NULL;
+     Contact* fortyNinth = NULL;
+     Contact* fiftieth = NULL;
+     Contact* fiftiethFirst = NULL;
+    
+
+    head = new Contact();
+    second = new Contact();
+    third = new Contact();
+    forth = new Contact();
+    fifth = new Contact();
+    sixth = new Contact();
+    seventh = new Contact();
+    eighth = new Contact();
+    ninth = new Contact();
+    tenth = new Contact();
+    eleventh = new Contact();
+    twelfth = new Contact();
+    thirteenth = new Contact();
+    fourteenth = new Contact();
+    fifteenth = new Contact();
+    sixteenth = new Contact();
+    seventeenth = new Contact();
+    eighteenth = new Contact();
+    nineteenth = new Contact();
+    twentieth = new Contact();
+    twentyFirst = new Contact();
+    twentySecond = new Contact();
+    twentyThird = new Contact();
+    twentyForth = new Contact();
+    twentyFifth = new Contact();
+    twentySixth = new Contact();
+    twentySeventh = new Contact();
+    twentyEighth = new Contact();
+    twentyNinth = new Contact();
+    thirty = new Contact();
+    thirtyFirst = new Contact();
+    thirtySecond = new Contact();
+    thirtyThird = new Contact();
+    thirtyForth = new Contact();
+     thirtyFifth = new Contact();
+     thirtySixth = new Contact();
+     thirtySeventh = new Contact();
+     twentyEighth = new Contact();
+     thirtyNinth = new Contact();
+     forty = new Contact();
+     fortyFirst = new Contact();
+     fortySecond = new Contact();
+     fortyThird = new Contact();
+     fortyForth = new Contact();
+     fortyFifth = new Contact();
+     fortySixth = new Contact();
+     fortySeventh = new Contact();
+     fortyEighth = new Contact();
+     fortyNinth = new Contact();
+     fiftieth = new Contact();
+     fiftiethFirst = new Contact();
+
+
+    head->data="Name: ABD";
+    head->next=second;
+    second->data="Given Name: jedo ";
+    second->next=third;
+    third->data="Additional Name: None";
+    third->next=forth;
+    forth->data="Family Name: abrlfm";
+    forth->next=fifth;
+    fifth->data="Yomi Name: عبدالرحيم";
+    fifth->next=sixth;
+    sixth->data="Given Name Yomi: عثمان";
+    sixth->next=seventh;
+    seventh->data="Additional Name Yomi: لا يوجد";
+    seventh->next=eighth;
+    eighth->data="Family Name Yomi: ابراهيم";
+    eighth->next=ninth;
+    ninth->data="Name Prefix: g";
+    ninth->next=tenth;
+    tenth->data="Name Suffix: u";
+    tenth->next=eleventh;
+    eleventh->data="Initials: yui ";
+    eleventh->next=twelfth;
+    twelfth->data="Nickname: jedo";
+    twelfth->next=thirteenth;
+    thirteenth->data="Short Name: عبد";
+    thirteenth->next=fourteenth;
+    fourteenth->data="Maiden Name: ابراهيم";
+    fourteenth->next=fifteenth;
+    fifteenth->data="Birthday: 3/8/1999";
+    fifteenth->next=sixteenth;
+    sixteenth->data="Gender: Male";
+    sixteenth->next=seventeenth;
+    seventeenth->data="Location: ام در/الخرطوم";
+    seventeenth->next=eighteenth;
+    eighteenth->data="Billing Information: None";
+    eighteenth->next=nineteenth;
+    nineteenth->data="Directory Server: None";
+    nineteenth->next=twentieth;
+    twentieth->data="Mileage: None";
+    twentieth->next=twentyFirst;
+    twentyFirst->data="Occupation: None";
+    twentyFirst->next=twentySecond;
+    twentySecond->data="Hobby: Football, Video games";
+    twentySecond->next=twentyThird;
+    twentyThird->data="Sensitivity: Single";
+    twentyThird->next=twentyForth;
+    twentyForth->data="Priority: None";
+    twentyForth->next=twentyFifth;
+    twentyFifth->data="Subject: Computer eng.";
+    twentyFifth->next=twentySixth;
+    twentySixth->data="Notes: Sweetheart";
+    twentySixth->next=twentySeventh;
+    twentySeventh->data="Language: English, العربية";
+    twentySeventh->next=twentyEighth;
+    twentyEighth->data="Photo: None";
+    twentyEighth->next=twentyNinth;
+    twentyNinth->data="Group Membership: Wide";
+    twentyNinth->next=thirty;
+    thirty->data="E-mail 1 - Type: G-mail";
+    thirty->next=thirtyFirst;
+    thirtyFirst->data="E-mail 1 - Value: tubidyjdoo@gmail.com";
+    thirtyFirst->next=thirtySecond;
+    thirtySecond->data="E-mail 2 - Type: Hotmail";
+    thirtySecond->next=thirtyThird;
+    thirtyThird->data="E-mail 2 - Value: tubidyjdoo@hotmail.com";
+    thirtyThird->next=thirtyForth;
+    thirtyForth->data="Phone 1 - Type: Mobile";
+     thirtyForth->next=thirtyFifth;
+     thirtyFifth->data="Phone 1 - Value: 0905945135";
+     thirtyFifth->next=thirtySixth;
+     thirtySixth->data="Phone 2 - Type: Internet call";
+     thirtySixth->next=thirtySeventh;
+    thirtySeventh->data="Phone 2 - Value: 0022282278";
+     thirtySeventh->next=thirtyEighth;
+     thirtyEighth->data="Phone 3 - Type: Home";
+     thirtyEighth->next=thirtyNinth;
+     thirtyNinth->data="Phone 3 - Value: 0112567899";
+     thirtyNinth->next=forty;
+     forty->data="Phone 4 - Type: None";
+     forty->next=fortyFirst;
+     fortyFirst->data="Phone 4 - Value: None";
+     fortyFirst->next=fortySecond;
+     fortySecond->data="Organization 1 - Type: طوعية";
+     fortySecond->next=fortyThird;
+     fortyThird->data="Organization 1 - Name: IEEE ANUSB";
+     fortyThird->next=fortyForth;
+     fortyForth->data="Organization 1 - Yomi Name: معهد مهندسي الكهرباء و المكنيكات";
+     fortyForth->next=fortyFifth;
+     fortyFifth->data="Organization 1 - Title: جامعة النيلين";
+     fortyFifth->next=fortySixth;
+     fortySixth->data="Organization 1 - Department: Computer and Electricity";
+     fortySixth->next=fortySeventh;
+     fortySeventh->data="Organization 1 - Symbol: CCNA";
+     fortySeventh->next=fortyEighth;
+     fortyEighth->data="Organization 1 - Location: New York, New York, US";
+     fortyEighth->next=fortyNinth;
+     fortyNinth->data="Organization 1 - Job Description: اقامة المؤتمرات العلمية المختصة في مجالات هندسية متعددة منها البرمجة";
+     fortyNinth->next=fiftieth;
+     fiftieth->data="Website 1 - Type: Business";
+     fiftieth->next=fiftiethFirst;
+     fiftiethFirst->data="Website 1 - Value: www.tarbhffdfchh.sd.com";
+    fiftiethFirst->next=NULL;
+   
+    printInfo(head);
+
+    cout<<"Which operation do you want to do?\n(add, delete, edit, combine, search): \n";
+    cin>> L;
+    if (L == "add"){
+        cout<<"do you want to push, insert after, append: ";
+        cin>> K;
+        if (K == "push"){
+            cout<<"Insert your field: ";
+            cin>> J;
+            push(&head, J);cout<<endl;
+        }else if(K == "insert after"){
+            cout<<"Insert your field: ";
+            cin>> G;
+            insertAfter(head->next, G);cout<<endl;
+        }else if (K == "append"){
+            cout<<"Insert your field: ";
+            cin>> H;
+            append(&head, H);cout<<endl;
+        }
+    }
+    printInfo(head);
+
+void create()
+{
+     file pointer
+    fstream fout;
+
+    opens an existing csv file or creates a new file.
+    fout.open("reportcard.csv", ios::out | ios::app);
+
+    cout << "Enter the details of 5 students:"
+         << " roll name maths phy chem bio";
+    << endl;
+
+    int i, roll, phy, chem, math, bio;
+    string name;
+
+     Read the input
+    for (i = 0; i < 5; i++) {
+
+        cin >> roll
+            >> name
+            >> math
+            >> phy
+            >> chem
+            >> bio;
+
+        Insert the data to file
+        fout << roll << ", "
+             << name << ", "
+             << math << ", "
+             << phy << ", "
+             << chem << ", "
+             << bio
+             << "\n";
+    }
+} void read_record()
+{
+
+     File pointer
+    fstream fin;
+
+     Open an existing file
+    fin.open("reportcard.csv", ios::in);
+
+     Get the roll number
+     of which the data is required
+    int rollnum, roll2, count = 0;
+    cout << "Enter the roll number "
+         << "of the student to display details: ";
+    cin >> rollnum;
+
+     Read the Data from the file
+     as String Vector
+    vector<string> row;
+    string line, word, temp;
+
+    while (fin >> temp) {
+
+        row.clear();
+
+         read an entire row and
+         store it in a string variable 'line'
+        getline(fin, line);
+
+        used for breaking words
+        stringstream s(line);
+
+         read every column data of a row and
+        store it in a string variable, 'word'
+        while (getline(s, word, ', ')) {
+
+             add all the column data
+             of a row to a vector
+            row.push_back(word);
+        }
+
+         convert string to integer for comparision
+        roll2 = stoi(row[0]);
+
+         Compare the roll number
+        if (roll2 == rollnum) {
+
+             Print the found data
+            count = 1;
+            cout << "Details of Roll " << row[0] << " : \n";
+            cout << "Name: " << row[1] << "\n";
+            cout << "Maths: " << row[2] << "\n";
+            cout << "Physics: " << row[3] << "\n";
+            cout << "Chemistry: " << row[4] << "\n";
+            cout << "Biology: " << row[5] << "\n";
+            break;
+        }
+    }
+    if (count == 0)
+        cout << "Record not found\n";
+} void update_recode()
+{
+
+     File pointer
+    fstream fin, fout;
+
+    Open an existing record
+    fin.open("reportcard.csv", ios::in);
+
+    Create a new file to store updated data
+    fout.open("reportcardnew.csv", ios::out);
+
+    int rollnum, roll1, marks, count = 0, i;
+    char sub;
+    int index, new_marks;
+    string line, word;
+    vector<string> row;
+
+    Get the roll number from the user
+    cout << "Enter the roll number "
+         << "of the record to be updated: ";
+    cin >> rollnum;
+
+    Get the data to be updated
+    cout << "Enter the subject "
+         << "to be updated(M/P/C/B): ";
+    cin >> sub;
+
+     Determine the index of the subject
+     where Maths has index 2,
+     Physics has index 3, and so on
+    if (sub == 'm' || sub == 'M')
+        index = 2;
+    else if (sub == 'p' || sub == 'P')
+        index = 3;
+    else if (sub == 'c' || sub == 'C')
+        index = 4;
+    else if (sub == 'b' || sub == 'B')
+        index = 5;
+    else {
+        cout << "Wrong choice.Enter again\n";
+        update_record();
+    }
+
+     Get the new marks
+    cout << "Enter new marks: ";
+    cin >> new_marks;
+
+     Traverse the file
+    while (!fin.eof()) {
+
+        row.clear();
+
+        getline(fin, line);
+        stringstream s(line);
+
+        while (getline(s, word, ', ')) {
+            row.push_back(word);
+        }
+
+        roll1 = stoi(row[0]);
+        int row_size = row.size();
+
+        if (roll1 == rollnum) {
+            count = 1;
+            stringstream convert;
+
+            sending a number as a stream into output string
+            convert << new_marks;
+
+             the str() converts number into string
+            row[index] = convert.str();
+
+            if (!fin.eof()) {
+                for (i = 0; i < row_size - 1; i++) {
+
+                     write the updated data
+                    /into a new file 'reportcardnew.csv'
+                     using fout
+                    fout << row[i] << ", ";
+                }
+
+                fout << row[row_size - 1] << "\n";
+            }
+        }
+        else {
+            if (!fin.eof()) {
+                for (i = 0; i < row_size - 1; i++) {
+
+                     writing other existing records
+                     into the new file using fout.
+                    fout << row[i] << ", ";
+                }
+
+                the last column data ends with a '\n'
+                fout << row[row_size - 1] << "\n";
+            }
+        }
+        if (fin.eof())
+            break;
+    }
+    if (count == 0)
+        cout << "Record not found\n";
+
+    fin.close();
+    fout.close();
+
+    removing the existing file
+    remove("reportcard.csv");
+
+    renaming the updated file with the existing file name
+    rename("reportcardnew.csv", "reportcard.csv");
+} void delete_record()
+{
+
+     Open FIle pointers
+    fstream fin, fout;
+
+    Open the existing file
+    fin.open("reportcard.csv", ios::in);
+
+     Create a new file to store the non-deleted data
+    fout.open("reportcardnew.csv", ios::out);
+
+    int rollnum, roll1, marks, count = 0, i;
+    char sub;
+    int index, new_marks;
+    string line, word;
+    vector<string> row;
+
+     Get the roll number
+     to decide the data to be deleted
+    cout << "Enter the roll number "
+         << "of the record to be deleted: ";
+    cin >> rollnum;
+
+     Check if this record exists
+     If exists, leave it and
+     add all other data to the new file
+    while (!fin.eof()) {
+
+        row.clear();
+        getline(fin, line);
+        stringstream s(line);
+
+        while (getline(s, word, ', ')) {
+            row.push_back(word);
+        }
+
+        int row_size = row.size();
+        roll1 = stoi(row[0]);
+
+        writing all records,
+        except the record to be deleted,
+        into the new file 'reportcardnew.csv'
+        using fout pointer
+        if (roll1 != rollnum) {
+            if (!fin.eof()) {
+                for (i = 0; i < row_size - 1; i++) {
+                    fout << row[i] << ", ";
+                }
+                fout << row[row_size - 1] << "\n";
+            }
+        }
+        else {
+            count = 1;
+        }
+        if (fin.eof())
+            break;
+    }
+    if (count == 1)
+        cout << "Record deleted\n";
+    else
+        cout << "Record not found\n";
+
+     Close the pointers
+    fin.close();
+    fout.close();
+
+    removing the existing file
+    remove("reportcard.csv");
+
+    renaming the new file with the existing file name
+    rename("reportcardnew.csv", "reportcard.csv");
+}
+
+ compare inserted term with the absent variable values
+contact* contactlist::findContacts(string search){
+	contact* x = NULL;
+	for( x = head1 ; x != NULL ; x = x -> next1)
+		if (x -> getname() == search || x -> getphone() == search || x -> getfamily() == ser || ( x -> getname() + " " + x -> getfamily() ) == search) {
+			return x;
+		}
+	return x;
+}
+real search in action
+contact* contactlist::fContacts(string ser){
+	contact* z = findContacts(search);
+	if (z == NULL){
+		cout << "\n\nNot found!" << endl;
+	}
+in case any contact is absent, it'll be shown
+	else {
+		cout << "\n\n------------------------------------" << endl;
+		z -> Contact();
+endl;
+	}
+	return z;
+}
+
+
+ delete feature
+void contactlist::deleteContact(string search){
+	if (head1 -> getname() == search || head1 -> getfamily() == search || (head1 -> getname() + " " + head1 -> getfamily()) == search) {
+		contact* temp1 = head1 -> next1;
+ delete is an operator used to destroy array and non-array (pointers)
+objects
+		delete head1;
+		head1 = temp1;
+		size1--;
+		return;
+	}
+	contact* temp1 = head1;
+	if (temp1 -> next1 == NULL) {
+		 cout << "\n\nNot found!" << endl;
+		 return;
+	}
+	while(temp1 -> next1 -> getname() != search && temp1 -> next1 -> getfamily() != search && (head1 -> getfamily() + " " + head1 -> getfamily()) != search && temp1 != NULL){ 
+		temp1 = temp1 -> next1;
+		if ( temp1 -> next1 == NULL ) {
+			 cout << "\n\nNot found!" << endl;
+			 return;
+		};
+	}
+ delete the specified contact, and put another in it's leftover
+	if(temp1 != NULL){
+	contact* temp3 = temp1 -> next1;
+	temp1 -> next1 = temp3 -> next1;
+	delete temp3;
+
+	if( last1 -> getname() == search || last1 -> getfamily() == search || ( last1->getname() + " " + last1->getfamily() ) == search ) {
+		last1 = temp1;
+	}
+the list gets smaller by one each time we delete
+	size1--;
+	}
+
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
